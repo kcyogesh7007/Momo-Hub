@@ -24,6 +24,13 @@ const userSchema = new Schema(
       enum: ["customer", "admin"],
       default: "admin",
     },
+    otp: {
+      type: Number,
+    },
+    isOtpVerified: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
