@@ -22,7 +22,7 @@ const userSchema = new Schema(
     role: {
       type: String,
       enum: ["customer", "admin"],
-      default: "admin",
+      default: "customer",
     },
     otp: {
       type: Number,
