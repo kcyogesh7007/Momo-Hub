@@ -16,11 +16,7 @@ exports.getProfile = async (req, res) => {
 exports.updateProfile = async (req, res) => {
   const userId = req.user._id;
   const { userName, userPhoneNumber, userEmail } = req.body;
-  if (!userName || !userPhoneNumber || !userEmail) {
-    return res.status(400).json({
-      message: "Please provide userName,userPhoneNumber and userEmail",
-    });
-  }
+
   const profile = await User.findByIdAndUpdate(
     userId,
     {
